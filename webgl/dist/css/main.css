@@ -1,0 +1,156 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: static;
+  background: #000; }
+
+html {
+  /*-webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;*/ }
+
+h1, h2, h3, h4, text, p {
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-webkit-font-smoothing: antialiased;*/ }
+
+a {
+  /*-webkit-font-smoothing: antialiased;*/
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 10px; }
+
+.Main-Canvas {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute; }
+
+.stamp {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 999;
+  left: 0px;
+  bottom: 0px;
+  margin: 20px;
+  background: url(../assets/wenStamp.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: .8;
+  transition: all .5s ease-out; }
+  .stamp:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.Loading-Container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: none;
+  /*transition:all .5s ease-out;*/
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+  .Loading-Container.hide {
+    /*opacity: 0;*/ }
+    .Loading-Container.hide .Loading, .Loading-Container.hide .Loading-Bar, .Loading-Container.hide .Loading-BarBg {
+      transition: opacity 1s ease-out;
+      opacity: 0; }
+
+.Loading {
+  font-family: Arial;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  margin-top: -25px;
+  top: 50%;
+  transition: opacity .5s ease-out; }
+
+.Loading-Bar {
+  transition: all .25s ease-out;
+  position: absolute;
+  background: rgba(200, 200, 200, 0.9);
+  width: 0%;
+  height: 1px;
+  left: 0px;
+  top: 50%; }
+
+.Loading-BarBg {
+  transition: all .25s ease-out;
+  position: absolute;
+  background: rgba(150, 150, 150, 0.5);
+  width: 100%;
+  height: 1px;
+  left: 0px;
+  top: 50%; }
+
+.Sound-Icon {
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  bottom: 0px;
+  right: 0px;
+  margin: 25px; }
+  .Sound-Icon.isOn .SoundIcon--On {
+    opacity: 1; }
+
+.SoundIcon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  transition: all .25s ease-out; }
+
+.Daniel-Sierra {
+  float: left;
+  opacity: 0;
+  letter-spacing: 1.5px;
+  padding-top: 1px;
+  color: #969696;
+  transition: all .5s ease-out; }
+  .isOn .Daniel-Sierra {
+    opacity: 1; }
+
+.Sound-Icon-Container {
+  margin-left: 10px;
+  float: left;
+  width: 15px;
+  height: 15px; }
+
+.SoundIcon--On {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: url(../assets/volumeOn.svg);
+  opacity: 0; }
+
+.SoundIcon--Off {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: url(../assets/volumeOff.svg); }
