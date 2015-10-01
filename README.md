@@ -9,7 +9,7 @@ darkforest.bongiovi.tw
 
 
 ##### Setup
-Cinder : Need to change the cinder library path.
+Cinder : Need to change the cinder library path in the build setting.
 
 WebGL : Need to run 
 ```
