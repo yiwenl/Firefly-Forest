@@ -12,6 +12,10 @@ darkforest.bongiovi.tw
 Cinder : Need to change the cinder library path.
 
 WebGL : Need to run 
-```npm install```
+```
+npm install
+```
 then
-```gulp```
+```
+gulp
+```
